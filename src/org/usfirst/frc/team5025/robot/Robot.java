@@ -19,6 +19,7 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
+	public static RobotMap rMap;
 
     Command autonomousCommand;
 
@@ -28,6 +29,7 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		oi = new OI();
+		RobotMap.init();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
     }
