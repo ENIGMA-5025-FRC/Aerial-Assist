@@ -27,7 +27,8 @@ public class RobotMap {
 
 	public static int WINCH_MOTOR = 5;
 	public static int LIFT_MOTOR = 6;
-	public static int LIFT_REEL = 7;
+	public static int LATCH = 7;
+	public static int LIFT_REEL = 8;
 	
-	public static int REEL_LIMIT_SWITCH = 5;
+	public static int WINCH_LIMIT_SWITCH = 5;
 }
