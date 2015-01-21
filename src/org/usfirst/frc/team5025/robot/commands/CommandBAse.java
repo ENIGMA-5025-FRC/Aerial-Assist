@@ -1,5 +1,8 @@
 package org.usfirst.frc.team5025.robot.commands;
 
+import org.usfirst.frc.team5025.robot.OI;
+import org.usfirst.frc.team5025.robot.subsystems.DriveTrain;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -7,9 +10,12 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class CommandBAse extends Command {
 
-    public CommandBAse() {
+    public static OI io;
+    public static DriveTrain drivetrain = new Drivetrain();
+	public CommandBAse() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+		requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
@@ -18,6 +24,7 @@ public class CommandBAse extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	drivetrain.TankDrive(OI.getX(), OI.getY());
     }
 
     // Make this return true when this Command no longer needs to run execute()
