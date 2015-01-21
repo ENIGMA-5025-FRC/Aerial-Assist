@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+
+import org.usfirst.frc.team5025.robot.commands.CommandBAse;
 import org.usfirst.frc.team5025.robot.commands.ExampleCommand;
 import org.usfirst.frc.team5025.robot.subsystems.ExampleSubsystem;
 
@@ -22,6 +24,7 @@ public class Robot extends IterativeRobot {
 	public static RobotMap rMap;
 
     Command autonomousCommand;
+    Command driveCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -32,6 +35,7 @@ public class Robot extends IterativeRobot {
 		RobotMap.init();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
+        driveCommand = new CommandBAse();
     }
 	
 	public void disabledPeriodic() {
@@ -70,6 +74,7 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
+    	driveCommand.
         Scheduler.getInstance().run();
     }
     
