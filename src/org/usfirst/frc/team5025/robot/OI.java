@@ -10,6 +10,7 @@ import org.usfirst.frc.team5025.robot.commands.ExampleCommand;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	Joystick mDriverJoystick = new Joystick(1);
 	Joystick mManipulatorJoystick = new Joystick(2);
 		JoystickButton mTriggerBTN = new JoystickButton(mManipulatorJoystick, 1);
 		JoystickButton mWindownBTN = new JoystickButton(mManipulatorJoystick, 2);
@@ -45,8 +46,23 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
-		public ;
-		
-		
+	public double getManipulatorX(){
+		return mManipulatorJoystick.getX();
+	}
+	public double getManipulatorY(){
+		return mManipulatorJoystick.getY();
+	}
+
+	public double getDriverX(){
+		return mDriverJoystick.getX();
+	}
+	public double getDriverY(){
+		return mDriverJoystick.getY();
+	}
+	public double getDriverZ(){
+		return mDriverJoystick.getZ();
+	}
 }
+
+
 
